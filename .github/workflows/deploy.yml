@@ -1,0 +1,67 @@
+name: Deploy Relevance AI Workforce
+
+on:
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'workforce_config.json'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Validate configuration
+        run: |
+          echo "🔍 Validating configuration..."
+          if [ ! -f workforce_config.json ]; then
+            echo "❌ workforce_config.json not found!"
+            exit 1
+          fi
+          
+          # Validate JSON
+          python3 -m json.tool workforce_config.json > /dev/null
+          echo "✅ Configuration valid"
+      
+      - name: Install Relevance AI CLI
+        run: |
+          echo "📦 Installing Relevance AI CLI..."
+          npm install -g @relevanceai/cli
+          relevance-ai --version
+      
+      - name: Deploy Workforce
+        env:
+          RELEVANCE_AI_API_KEY: ${{ secrets.RELEVANCE_AI_API_KEY }}
+          RELEVANCE_AI_WORKSPACE_ID: d7b62b
+          RELEVANCE_AI_PROJECT_ID: c4d1f814c405-40fd-ab6c-0426439371df
+        run: |
+          echo "🚀 Deploying workforce..."
+          relevance-ai workforces create --config workforce_config.json
+          echo "✅ Deployment complete!"
+      
+      - name: Verify Deployment
+        env:
+          RELEVANCE_AI_API_KEY: ${{ secrets.RELEVANCE_AI_API_KEY }}
+        run: |
+          echo "✅ Verifying deployment..."
+          relevance-ai workforces list
+      
+      - name: Success Notification
+        if: success()
+        run: echo "🎉 Deployment successful!"
+      
+      - name: Failure Notification
+        if: failure()
+        run: |
+          echo "❌ Deployment failed!"
+          exit 1

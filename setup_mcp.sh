@@ -5,7 +5,7 @@ echo "🚀 Activation de l'intégration MCP complète + Pont ChatGPT-Manus..."
 # 1. Créer le répertoire de config MCP
 mkdir -p ~/.mcp
 
-# 2. Créer une configuration étendue avec le pont Manus
+# 2. Créer une configuration étendue avec TA CLÉ MANUS
 cat > ~/.mcp/config.json << 'MCP_CONF'
 {
   "mcpServers": {
@@ -13,7 +13,7 @@ cat > ~/.mcp/config.json << 'MCP_CONF'
       "command": "npx",
       "args": ["-y", "@manus/mcp-bridge-server"],
       "env": {
-        "MANUS_API_KEY": "votre_cle_manus_ici"
+        "MANUS_API_KEY": "sk-TEKENLb_4FM1xUD0skvl7Y5bxdg_ZwSBn93f4UyT3obza8szuxS1v4AFcs5iokvaLur6obq0SlG80yIIr-Zu_rKeVdze"
       }
     },
     "notion": {
@@ -44,7 +44,7 @@ cat > ~/.mcp/config.json << 'MCP_CONF'
 }
 MCP_CONF
 
-echo "✅ Pont ChatGPT-Manus configuré via 'manus-bridge'"
-echo "✅ Autres serveurs MCP configurés"
+echo "✅ Pont ChatGPT-Manus configuré avec TA CLÉ API !"
+echo "✅ Tous les serveurs MCP sont prêts."
 echo ""
 echo "🚀 Intégration MCP complète activée !"

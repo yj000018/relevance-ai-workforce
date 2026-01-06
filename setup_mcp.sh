@@ -1,14 +1,21 @@
 #!/bin/bash
 
-echo "🔗 Activation de l'intégration MCP complète (LLMs, Web, Tools)..."
+echo "🚀 Activation de l'intégration MCP complète + Pont ChatGPT-Manus..."
 
 # 1. Créer le répertoire de config MCP
 mkdir -p ~/.mcp
 
-# 2. Créer une configuration étendue
+# 2. Créer une configuration étendue avec le pont Manus
 cat > ~/.mcp/config.json << 'MCP_CONF'
 {
   "mcpServers": {
+    "manus-bridge": {
+      "command": "npx",
+      "args": ["-y", "@manus/mcp-bridge-server"],
+      "env": {
+        "MANUS_API_KEY": "votre_cle_manus_ici"
+      }
+    },
     "notion": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-notion"]
@@ -32,23 +39,12 @@ cat > ~/.mcp/config.json << 'MCP_CONF'
     "brave-search": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-brave-search"]
-    },
-    "fetch": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"]
-    },
-    "everything": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-everything"]
     }
   }
 }
 MCP_CONF
 
-echo "✅ Serveurs MCP configurés :"
-echo "   - Productivité : Notion, Slack, Gmail, Google Drive"
-echo "   - Développement : GitHub"
-echo "   - Recherche : Brave Search, Fetch"
-echo "   - Utilitaires : Everything"
+echo "✅ Pont ChatGPT-Manus configuré via 'manus-bridge'"
+echo "✅ Autres serveurs MCP configurés"
 echo ""
 echo "🚀 Intégration MCP complète activée !"

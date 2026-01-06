@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "🔗 Activation de l'intégration MCP..."
+echo "🔗 Activation de l'intégration MCP complète (LLMs, Web, Tools)..."
 
 # 1. Créer le répertoire de config MCP
 mkdir -p ~/.mcp
 
-# 2. Créer une configuration de base
+# 2. Créer une configuration étendue
 cat > ~/.mcp/config.json << 'MCP_CONF'
 {
   "mcpServers": {
@@ -20,10 +20,35 @@ cat > ~/.mcp/config.json << 'MCP_CONF'
     "gmail": {
       "command": "npx",
       "args": ["-y", "@modelcontextprotocol/server-gmail"]
+    },
+    "google-drive": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-google-drive"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"]
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-brave-search"]
+    },
+    "fetch": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-fetch"]
+    },
+    "everything": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everything"]
     }
   }
 }
 MCP_CONF
 
-echo "✅ Serveurs MCP configurés (Notion, Slack, Gmail)"
-echo "🚀 Intégration MCP activée !"
+echo "✅ Serveurs MCP configurés :"
+echo "   - Productivité : Notion, Slack, Gmail, Google Drive"
+echo "   - Développement : GitHub"
+echo "   - Recherche : Brave Search, Fetch"
+echo "   - Utilitaires : Everything"
+echo ""
+echo "🚀 Intégration MCP complète activée !"

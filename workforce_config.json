@@ -191,12 +191,132 @@
       {
         "from": "trigger_1",
         "to": "y-pa",
-        "label": "New Request"
+        "label": "New User Request"
       },
       {
         "from": "y-pa",
         "to": "y-coo",
-        "label": "Delegate to Operations"
+        "label": "Delegate System Surveillance"
+      },
+      {
+        "from": "y-coo",
+        "to": "y-pa",
+        "label": "Send Critical Alerts"
+      },
+      {
+        "from": "y-coo",
+        "to": "y-tech",
+        "label": "Request Maintenance/Action"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-strategist",
+        "label": "Request Strategic Watch"
+      },
+      {
+        "from": "y-strategist",
+        "to": "y-pa",
+        "label": "Send Strategic Briefs"
+      },
+      {
+        "from": "y-strategist",
+        "to": "y-mem",
+        "label": "Archive News/Analysis"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-strategist",
+        "label": "Request Partner Identification"
+      },
+      {
+        "from": "y-strategist",
+        "to": "y-pa",
+        "label": "Send Partner Recommendations"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-mem",
+        "label": "Archive Partner Profiles"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-spirit",
+        "label": "Request Holistic Health Support"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-mem",
+        "label": "Archive Health Data"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-spirit",
+        "label": "Request Spiritual Guidance"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-mem",
+        "label": "Archive Conversations/Reflections"
+      },
+      {
+        "from": "y-coo",
+        "to": "y-worker",
+        "label": "Assign Operational Task"
+      },
+      {
+        "from": "y-worker",
+        "to": "y-coo",
+        "label": "Report Task Completion"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-design",
+        "label": "Request Design Review"
+      },
+      {
+        "from": "y-design",
+        "to": "y-pa",
+        "label": "Provide Design Feedback"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-fin",
+        "label": "Request Financial Report"
+      },
+      {
+        "from": "y-fin",
+        "to": "y-pa",
+        "label": "Provide Financial Data"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-hr",
+        "label": "Request HR Support"
+      },
+      {
+        "from": "y-hr",
+        "to": "y-pa",
+        "label": "Provide HR Information"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-tech",
+        "label": "Request Tech Support"
+      },
+      {
+        "from": "y-tech",
+        "to": "y-pa",
+        "label": "Provide Tech Solution"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-ceo",
+        "label": "Present Strategic Options"
+      },
+      {
+        "from": "y-ceo",
+        "to": "y-pa",
+        "label": "Communicate Decision"
       }
     ]
   },

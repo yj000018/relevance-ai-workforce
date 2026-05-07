@@ -195,48 +195,63 @@
       },
       {
         "from": "y-pa",
+        "to": "y-ceo",
+        "label": "Strategic Goal Setting"
+      },
+      {
+        "from": "y-ceo",
+        "to": "y-pa",
+        "label": "Strategic Directives"
+      },
+      {
+        "from": "y-pa",
+        "to": "y-strategist",
+        "label": "Request Strategic Scan"
+      },
+      {
+        "from": "y-strategist",
+        "to": "y-mem",
+        "label": "Aspirate Strategic Insights"
+      },
+      {
+        "from": "y-strategist",
+        "to": "y-pa",
+        "label": "Deliver Strategic Brief"
+      },
+      {
+        "from": "y-pa",
         "to": "y-coo",
-        "label": "Delegate System Surveillance"
+        "label": "Request System Surveillance"
+      },
+      {
+        "from": "y-coo",
+        "to": "y-mem",
+        "label": "Aspirate Monitoring Data"
       },
       {
         "from": "y-coo",
         "to": "y-pa",
-        "label": "Send Critical Alerts"
+        "label": "Report Operational Status"
       },
       {
         "from": "y-coo",
         "to": "y-tech",
-        "label": "Request Maintenance/Action"
+        "label": "Delegate System Maintenance"
       },
       {
-        "from": "y-pa",
-        "to": "y-strategist",
-        "label": "Request Strategic Watch"
-      },
-      {
-        "from": "y-strategist",
+        "from": "y-mem",
         "to": "y-pa",
-        "label": "Send Strategic Briefs"
+        "label": "Provide Contextual Information"
       },
       {
-        "from": "y-strategist",
-        "to": "y-mem",
-        "label": "Archive News/Analysis"
-      },
-      {
-        "from": "y-pa",
+        "from": "y-mem",
         "to": "y-strategist",
-        "label": "Request Partner Identification"
+        "label": "Provide Historical Data"
       },
       {
-        "from": "y-strategist",
-        "to": "y-pa",
-        "label": "Send Partner Recommendations"
-      },
-      {
-        "from": "y-pa",
-        "to": "y-mem",
-        "label": "Archive Partner Profiles"
+        "from": "y-mem",
+        "to": "y-coo",
+        "label": "Provide System Logs"
       },
       {
         "from": "y-pa",
@@ -244,49 +259,39 @@
         "label": "Request Holistic Health Support"
       },
       {
-        "from": "y-pa",
-        "to": "y-mem",
-        "label": "Archive Health Data"
+        "from": "y-spirit",
+        "to": "y-pa",
+        "label": "Provide Guidance"
       },
       {
         "from": "y-pa",
-        "to": "y-spirit",
-        "label": "Request Spiritual Guidance"
-      },
-      {
-        "from": "y-pa",
-        "to": "y-mem",
-        "label": "Archive Conversations/Reflections"
-      },
-      {
-        "from": "y-coo",
         "to": "y-worker",
-        "label": "Assign Operational Task"
+        "label": "Assign Task Execution"
       },
       {
         "from": "y-worker",
-        "to": "y-coo",
+        "to": "y-pa",
         "label": "Report Task Completion"
       },
       {
         "from": "y-pa",
         "to": "y-design",
-        "label": "Request Design Review"
+        "label": "Request Design Input"
       },
       {
         "from": "y-design",
         "to": "y-pa",
-        "label": "Provide Design Feedback"
+        "label": "Provide Design Assets"
       },
       {
         "from": "y-pa",
         "to": "y-fin",
-        "label": "Request Financial Report"
+        "label": "Request Financial Analysis"
       },
       {
         "from": "y-fin",
         "to": "y-pa",
-        "label": "Provide Financial Data"
+        "label": "Provide Financial Report"
       },
       {
         "from": "y-pa",
@@ -301,22 +306,12 @@
       {
         "from": "y-pa",
         "to": "y-tech",
-        "label": "Request Tech Support"
+        "label": "Request Technical Assistance"
       },
       {
         "from": "y-tech",
         "to": "y-pa",
-        "label": "Provide Tech Solution"
-      },
-      {
-        "from": "y-pa",
-        "to": "y-ceo",
-        "label": "Present Strategic Options"
-      },
-      {
-        "from": "y-ceo",
-        "to": "y-pa",
-        "label": "Communicate Decision"
+        "label": "Provide Technical Solution"
       }
     ]
   },
